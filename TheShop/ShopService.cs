@@ -7,9 +7,9 @@ namespace TheShop
 		private DatabaseDriver DatabaseDriver;
 		private Logger logger;
 
-		private Supplier1 Supplier1;
-		private Supplier2 Supplier2;
-		private Supplier3 Supplier3;
+		private ISupplier Supplier1;
+		private ISupplier Supplier2;
+		private ISupplier Supplier3;
 		
 		public ShopService()
 		{
