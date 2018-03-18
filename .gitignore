@@ -1,6 +1,7 @@
-[Dd]ebug/
-[Rr]elease/
-x64/
-[Bb]in/
-[Oo]bj/
-#build/
+*/[Dd]ebug/
+*/[Rr]elease/
+*/x64/
+*/[Bb]in/
+.TheShop/[Oo]bj/
+*/#build/
+.vs/
