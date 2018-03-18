@@ -15,6 +15,9 @@ namespace TheShop
 		    var logger = kernel.Get<ILogger>();
             var shopService = new ShopService(articleBroker, logger);
 
+            articleBroker.RegisterSupplier(new Supplier1());
+            articleBroker.RegisterSupplier(new Supplier2());
+            articleBroker.RegisterSupplier(new Supplier3());
 			try
 			{
 				//order and sell

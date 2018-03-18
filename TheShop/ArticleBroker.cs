@@ -8,20 +8,15 @@ namespace TheShop
 {
     class ArticleBroker :IArticleBroker
     {
-        private readonly List<ISupplier> suppliers;
-
-        public ArticleBroker()
-        {
-            suppliers = new List<ISupplier>
-            {
-                new Supplier1(),
-                new Supplier2(),
-                new Supplier3()
-            };
-        }
+        private readonly List<ISupplier> suppliers = new List<ISupplier>();
 
         public Article GetArticle(int articleId, int maxExpectedPrice)
         {
+            if (suppliers.Count == 0)
+            {
+                return null;
+            }
+
             var article = suppliers.FirstOrDefault(supplier => supplier.ArticleInInventory(articleId) &&
                                                                    maxExpectedPrice < supplier.GetArticle(articleId).ArticlePrice)
                 ?.GetArticle(articleId);
