@@ -4,3 +4,10 @@ C:\Users\jost\Documents\TheShop\TheShop\bin\Debug\TheShop.pdb
 C:\Users\jost\Documents\TheShop\TheShop\obj\Debug\TheShop.csproj.CoreCompileInputs.cache
 C:\Users\jost\Documents\TheShop\TheShop\obj\Debug\TheShop.exe
 C:\Users\jost\Documents\TheShop\TheShop\obj\Debug\TheShop.pdb
+C:\Users\jost\Documents\theshop-refactoring\TheShop\bin\Debug\TheShop.exe.config
+C:\Users\jost\Documents\theshop-refactoring\TheShop\bin\Debug\TheShop.exe
+C:\Users\jost\Documents\theshop-refactoring\TheShop\bin\Debug\TheShop.pdb
+C:\Users\jost\Documents\theshop-refactoring\TheShop\obj\Debug\TheShop.csproj.CoreCompileInputs.cache
+C:\Users\jost\Documents\theshop-refactoring\TheShop\obj\Debug\TheShop.exe
+C:\Users\jost\Documents\theshop-refactoring\TheShop\obj\Debug\TheShop.pdb
+C:\Users\jost\Documents\theshop-refactoring\TheShop\obj\Debug\TheShop.csprojResolveAssemblyReference.cache
