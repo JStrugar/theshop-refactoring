@@ -16,7 +16,8 @@ namespace TheShop
         }
         public override void Load()
         {
-            this.kernel.Bind<IArticleBroker>().To<ArticleBroker>();
+            this.kernel.Bind<IArticleBroker>().To<ArticleBroker>().InSingletonScope();
+            this.kernel.Bind<ILogger>().To<Logger>().InSingletonScope();
         }
     }
 }

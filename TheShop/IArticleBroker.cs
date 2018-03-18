@@ -9,5 +9,7 @@ namespace TheShop
     public interface IArticleBroker
     {
         Article GetArticle(int articleId, int maxExpectedPrice);
+        void RegisterSupplier(ISupplier supplier);
+        void RemoveSupplier(ISupplier supplier);
     }
 }

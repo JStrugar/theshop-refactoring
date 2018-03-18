@@ -8,7 +8,7 @@ namespace TheShop
 {
     class ArticleBroker :IArticleBroker
     {
-        private readonly IEnumerable<ISupplier> suppliers;
+        private readonly List<ISupplier> suppliers;
 
         public ArticleBroker()
         {
@@ -32,6 +32,16 @@ namespace TheShop
             }
 
             return article;
+        }
+
+        public void RegisterSupplier(ISupplier supplier)
+        {
+            suppliers.Add(supplier);
+        }
+
+        public void RemoveSupplier(ISupplier supplier)
+        {
+            suppliers.Remove(supplier);
         }
     }
 }

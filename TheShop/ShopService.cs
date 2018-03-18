@@ -5,13 +5,13 @@ namespace TheShop
 	public class ShopService
 	{
 		private DatabaseDriver DatabaseDriver;
-		private Logger logger;
+		private ILogger logger;
 	    private IArticleBroker articleBroker;
 		
-		public ShopService(IArticleBroker articleBroker)
+		public ShopService(IArticleBroker articleBroker, ILogger logger)
 		{
 			DatabaseDriver = new DatabaseDriver();
-			logger = new Logger();
+		    this.logger = logger;
             this.articleBroker = articleBroker;
 		}
 

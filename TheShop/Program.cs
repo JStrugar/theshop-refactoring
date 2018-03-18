@@ -12,7 +12,8 @@ namespace TheShop
 		    new Bindings(kernel).Load();
 		    kernel.Load(Assembly.GetExecutingAssembly());
             var articleBroker = kernel.Get<IArticleBroker>();
-            var shopService = new ShopService(articleBroker);
+		    var logger = kernel.Get<ILogger>();
+            var shopService = new ShopService(articleBroker, logger);
 
 			try
 			{

@@ -49,6 +49,7 @@
     <Compile Include="ArticleBroker.cs" />
     <Compile Include="Bindings.cs" />
     <Compile Include="IArticleBroker.cs" />
+    <Compile Include="ILogger.cs" />
     <Compile Include="ISupplier.cs" />
     <Compile Include="DatabaseDriver.cs" />
     <Compile Include="Logger.cs" />
