@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TheShop
 {
-    class ArticleBroker
+    class ArticleBroker :IArticleBroker
     {
         private IEnumerable<ISupplier> suppliers;
 
