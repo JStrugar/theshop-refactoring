@@ -8,7 +8,7 @@ namespace TheShop
 {
     class ArticleBroker :IArticleBroker
     {
-        private IEnumerable<ISupplier> suppliers;
+        private readonly IEnumerable<ISupplier> suppliers;
 
         public ArticleBroker()
         {
@@ -33,7 +33,5 @@ namespace TheShop
 
             return article;
         }
-
-
     }
 }

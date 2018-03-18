@@ -6,7 +6,7 @@ namespace TheShop
 	{
 		private DatabaseDriver DatabaseDriver;
 		private Logger logger;
-
+	    private IArticleBroker articleBroker;
 		private ISupplier Supplier1;
 		private ISupplier Supplier2;
 		private ISupplier Supplier3;
@@ -18,41 +18,15 @@ namespace TheShop
 			Supplier1 = new Supplier1();
 			Supplier2 = new Supplier2();
 			Supplier3 = new Supplier3();
+            articleBroker = new ArticleBroker();
 		}
 
 		public void OrderAndSellArticle(int id, int maxExpectedPrice, int buyerId)
 		{
 			#region ordering article
 
-			Article article = null;
-			Article tempArticle = null;
-			var articleExists = Supplier1.ArticleInInventory(id);
-			if (articleExists)
-			{
-				tempArticle = Supplier1.GetArticle(id);
-				if (maxExpectedPrice < tempArticle.ArticlePrice)
-				{
-					articleExists = Supplier2.ArticleInInventory(id);
-					if (articleExists)
-					{
-						tempArticle = Supplier2.GetArticle(id);
-						if (maxExpectedPrice < tempArticle.ArticlePrice)
-						{
-							articleExists = Supplier3.ArticleInInventory(id);
-							if (articleExists)
-							{
-								tempArticle = Supplier3.GetArticle(id);
-								if (maxExpectedPrice < tempArticle.ArticlePrice)
-								{
-									article = tempArticle;
-								}
-							}
-						}
-					}
-				}
-			}
+			Article article = articleBroker.GetArticle(id, maxExpectedPrice);
 			
-			article = tempArticle;
 			#endregion
 
 			#region selling article
