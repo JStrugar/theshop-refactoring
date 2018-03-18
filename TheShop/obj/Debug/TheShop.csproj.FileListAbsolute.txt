@@ -11,3 +11,5 @@ C:\Users\jost\Documents\theshop-refactoring\TheShop\obj\Debug\TheShop.csproj.Cor
 C:\Users\jost\Documents\theshop-refactoring\TheShop\obj\Debug\TheShop.exe
 C:\Users\jost\Documents\theshop-refactoring\TheShop\obj\Debug\TheShop.pdb
 C:\Users\jost\Documents\theshop-refactoring\TheShop\obj\Debug\TheShop.csprojResolveAssemblyReference.cache
+C:\Users\jost\Documents\theshop-refactoring\TheShop\bin\Debug\Ninject.dll
+C:\Users\jost\Documents\theshop-refactoring\TheShop\bin\Debug\Ninject.xml
