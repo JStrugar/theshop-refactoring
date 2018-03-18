@@ -8,11 +8,11 @@ namespace TheShop
 		private Logger logger;
 	    private IArticleBroker articleBroker;
 		
-		public ShopService()
+		public ShopService(IArticleBroker articleBroker)
 		{
 			DatabaseDriver = new DatabaseDriver();
 			logger = new Logger();
-            articleBroker = new ArticleBroker();
+            this.articleBroker = articleBroker;
 		}
 
 		public void OrderAndSellArticle(int id, int maxExpectedPrice, int buyerId)

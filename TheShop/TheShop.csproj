@@ -47,6 +47,7 @@
   <ItemGroup>
     <Compile Include="Article.cs" />
     <Compile Include="ArticleBroker.cs" />
+    <Compile Include="Bindings.cs" />
     <Compile Include="IArticleBroker.cs" />
     <Compile Include="ISupplier.cs" />
     <Compile Include="DatabaseDriver.cs" />

@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Reflection;
+using Ninject;
 
 namespace TheShop
 {
@@ -6,7 +8,11 @@ namespace TheShop
 	{
 		private static void Main(string[] args)
 		{
-			var shopService = new ShopService();
+		    var kernel = new StandardKernel();
+		    new Bindings(kernel).Load();
+		    kernel.Load(Assembly.GetExecutingAssembly());
+            var articleBroker = kernel.Get<IArticleBroker>();
+            var shopService = new ShopService(articleBroker);
 
 			try
 			{

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TheShop
 {
-    interface IArticleBroker
+    public interface IArticleBroker
     {
         Article GetArticle(int articleId, int maxExpectedPrice);
     }
