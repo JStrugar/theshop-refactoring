@@ -20,7 +20,7 @@ namespace TheShop
             };
         }
 
-        public Article GetArticle(int articleId, int maxExpectedPrice, int buyerId)
+        public Article GetArticle(int articleId, int maxExpectedPrice)
         {
             var article = suppliers.FirstOrDefault(supplier => supplier.ArticleInInventory(articleId) &&
                                                                    maxExpectedPrice < supplier.GetArticle(articleId).ArticlePrice)
